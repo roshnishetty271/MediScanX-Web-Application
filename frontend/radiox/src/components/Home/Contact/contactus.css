@@ -1,0 +1,123 @@
+/* Contact Page Styles */
+
+.contact-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(15, 35, 50, 255);
+    border-radius: 95px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    min-height: 600px;
+    width: 100%;
+}
+
+.green-tick {
+    width: 70px;
+    /* Adjust the size of the green tick */
+}
+
+.big-text {
+    font-size: 50px;
+    color: white;
+    /* Green color */
+    margin-top: 20px;
+    position: relative;
+    left: -15px;
+}
+
+.get-in-touch {
+    font-size: 23px;
+    margin-top: 15px;
+    color: white;
+    margin-bottom: 60px;
+}
+
+.container2 {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 35px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    width: 87%;
+    height: 500px;
+    position: relative;
+    top: -100px;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(245, 248, 250, 255);
+}
+
+.help-text {
+    font-size: 27px;
+    color: black;
+    /* Dark gray color */
+    margin-bottom: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.radiox-logo {
+    height: 180px;
+    width: 180px;
+    margin-bottom: 90px;
+    margin-left: 200px;
+}
+
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 20px;
+    height: 200px;
+}
+
+.left-column,
+.right-column {
+    flex: 1;
+    padding: 10px 10px;
+    margin: 15px;
+}
+
+.form-container input::placeholder {
+    color: black;
+}
+
+textarea::placeholder {
+    color: black;
+}
+
+textarea {
+    width: 93%;
+    position: relative;
+    margin-top: 15px;
+    right: -10px;
+    background-color: rgba(245, 248, 250, 255);
+    border-radius: 5px;
+}
+
+.submit-button {
+    background-color: #007bff;
+    /* Blue color */
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 15px;
+}

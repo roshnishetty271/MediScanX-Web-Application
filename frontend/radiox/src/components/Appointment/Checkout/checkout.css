@@ -1,0 +1,244 @@
+.checkout-page {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.checkout-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+    overflow: hidden;
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.checkout-content {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 2;
+  width: 80%;
+  max-width: 800px;
+}
+
+.checkout-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.checkout-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.appointment-summary {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 25px;
+  margin: 20px 0;
+  color: #333;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+.appointment-summary h2 {
+  color: #3498db;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.service-name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.details-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+.details-row span {
+  flex: 1;
+  padding: 0 10px;
+}
+
+.price-tag {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2ecc71;
+  text-align: center;
+  margin: 20px 0;
+  padding: 10px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.payment-notice {
+  background-color: #f1f9fe;
+  border-left: 4px solid #3498db;
+  padding: 12px 15px;
+  font-size: 1.1rem;
+  margin: 20px 0;
+  color: #2c3e50;
+  line-height: 1.5;
+}
+
+.back-button {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 12px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  margin-top: 15px;
+}
+
+.back-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Missing appointment styles */
+.missing-appointment {
+  background-color: white;
+  border-radius: 12px;
+  padding: 30px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin: 100px auto;
+}
+
+.missing-icon {
+  width: 60px;
+  height: 60px;
+  background-color: #e74c3c;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  margin: 0 auto 20px;
+  box-shadow: 0 4px 8px rgba(231, 76, 60, 0.3);
+}
+
+.missing-appointment h2 {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.missing-appointment p {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+.missing-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.schedule-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  flex: 1;
+}
+
+.schedule-button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+}
+
+.back-to-profile-button {
+  background-color: #f5f5f7;
+  color: #333;
+  border: 1px solid #ddd;
+  padding: 12px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  flex: 1;
+}
+
+.back-to-profile-button:hover {
+  background-color: #e0e0e0;
+}
+
+.loading-spinner {
+  color: white;
+  font-size: 1.2rem;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.error-message {
+  background-color: rgba(231, 76, 60, 0.8);
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 20px 0;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .checkout-content {
+    width: 90%;
+  }
+  
+  .details-row {
+    flex-direction: column;
+  }
+  
+  .details-row span {
+    margin-bottom: 8px;
+  }
+  
+  .missing-actions {
+    flex-direction: column;
+  }
+  }

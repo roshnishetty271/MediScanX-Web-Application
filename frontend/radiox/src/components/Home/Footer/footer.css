@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+}
+
+.footer-sections-container {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(11, 36, 52);
+    color: white;
+    height: 450px;
+    position: relative;
+    padding-top: 30px;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+}
+
+.footer-section img {
+    height: 100px;
+    width: 160px;
+}
+
+.footer-heading {
+    padding-bottom: 30px;
+    color: rgb(233, 116, 99);
+}
+
+.footer-qure-para {
+    color: rgba(175, 203, 219, 0.5);
+}
+
+.footer-follow-us {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-follow-us p {
+    text-align: left;
+}
+
+.footer-icons-container img {
+    margin: 10px 0;
+    width: 35px;
+    height: 35px;
+    margin-right: 25px;
+}
+
+.footer-products {
+    margin-left: 60px;
+}
+
+.footer-about {
+    margin-left: 40px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section li a {
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: white;
+}
+
+.footer-section li a:hover {
+    text-decoration: underline;
+}
+
+.footer-section li {
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: white;
+}
+
+.footer-icon:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,56 @@
+/* Container styles */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(15, 36, 50, 255);
+}
+
+
+/* CurvedBox styles */
+
+.curved-box {
+    background-color: rgba(9, 25, 39);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 300px;
+    height: 290px;
+    /* Increased height to accommodate text */
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Add shadow to the box */
+    transition: transform 0.2s ease-in-out;
+    /* Add a transition effect for a smooth hover */
+}
+
+.curved-box:hover {
+    transform: scale(1.05);
+    /* Increase size on hover for a subtle effect */
+}
+
+.curved-box img {
+    max-width: 100%;
+    max-height: 70%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    object-fit: cover;
+    /* Ensure the image covers the entire container */
+}
+
+
+/* Text box styles */
+
+.curved-box .text-box {
+    color: rgb(249, 246, 246);
+    margin: 0;
+    font-size: 25px;
+    /* Set the desired font size */
+    font-weight: bold;
+    /* Make the text bold */
+}

@@ -1,0 +1,33 @@
+.city-btn-grp{
+    border: 1px solid #a0a096;
+    border-radius: 5px;
+  
+  }
+  
+  .city-btn {
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0.5rem 0;
+    width: 8rem;
+    color: #343333;
+  }
+  
+  /* .city-btn:hover {
+    
+    background-color: #ffffff;
+  } */
+  
+  .city-btn-active {
+    background-color: #c6cacc;
+    /* color: #8e8a8a; */
+  }
+  
+  .city-btn-inactive {
+    background-color: #e8eced;
+    /* color: #000000; */
+  }
+  
+  .city-btn:not(:last-child) {
+    border-right: 1px solid #a0a096;
+  }

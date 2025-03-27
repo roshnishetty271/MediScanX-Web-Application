@@ -1,0 +1,18 @@
+/* DoctorDropdown.css */
+
+.doctor-dropdown {
+    width: 24rem;
+    border: none;
+    color: #4699ad;
+    font-size: 1rem;
+    font-weight: 700;
+    outline: none; 
+  }
+  
+  .doctor-dropdown.selected {
+    border: none;
+  }
+  
+  .doctor-dropdown option{
+    cursor: pointer;
+  }

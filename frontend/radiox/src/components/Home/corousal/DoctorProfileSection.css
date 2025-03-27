@@ -1,0 +1,140 @@
+/* DoctorProfileSection.css */
+
+body {
+    margin: 0;
+}
+
+.section-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 330px;
+    background-color: rgba(243, 244, 246, 255);
+    overflow: hidden;
+    position: relative;
+}
+
+.profile-container {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    width: 700px;
+    margin-right: 20px;
+    animation: moveLeftToRight 40s linear infinite;
+    /* Continuous animation without hover */
+    transition: transform 0.5s ease-in-out;
+    /* Added transition for smoother effects */
+}
+
+.section-parent {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(243, 244, 246, 255);
+  padding-bottom: 2rem;
+}
+
+.section-title{
+  display: flex;
+  justify-content: center;
+  color: #0a0909;
+  font-size: 30px;
+}
+
+/* Added a more specific selector to pause the animation on hover */
+
+.profile-container:hover .profile {
+    animation-play-state: paused;
+    /* Pause the animation on hover */
+}
+
+
+/* Ensure animation stays paused when hovered */
+
+.profile-container.paused .profile {
+    animation-play-state: paused;
+}
+
+.profile-container:last-child {
+    margin-right: 0;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    transform: translateX(0);
+    border-radius: 50%;
+    /* Highlight background color */
+    transition: background-color 0.3s ease-in-out;
+    /* Smooth transition for highlighting */
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+@keyframes moveLeftToRight {
+    0% {
+        transform: translateX(-410%);
+    }
+    100% {
+        transform: translateX(410%);
+    }
+}
+
+.profile:hover {
+    filter: none;
+}
+
+.name {
+    color: #0a0909;
+    font-size: 30px;
+    margin-bottom: 15px;
+    font-weight: bolder;
+}
+
+.specialty {
+    color: #0a0909;
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bolder;
+}
+
+.description {
+    color: #0f0e0e;
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.blur {
+    filter: blur(5px);
+}
+
+
+/* Pause the animation on selecting a doctor profile */
+
+.profile-container:active .profile {
+    animation-play-state: paused;
+}
+
+
+/* Highlight background color for selected profile */
+
+.profile-container.selected {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+
+/* Highlight background color for hovered profile */
+
+.profile.highlight {
+    background-color: rgba(255, 255, 255, 0.9);
+}

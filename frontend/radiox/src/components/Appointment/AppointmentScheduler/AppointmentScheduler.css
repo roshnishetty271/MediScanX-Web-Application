@@ -1,0 +1,345 @@
+.appointment-scheduler {
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  color: #333;
+}
+
+.appointment-scheduler h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+}
+
+.scheduler-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.scheduler-left, .scheduler-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.scheduler-section {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.scheduler-section h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #3498db;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.scheduler-section h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: #3498db;
+  border-radius: 2px;
+}
+
+.city-selection {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.appointment-summary {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 15px 0;
+}
+
+.summary-item {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.summary-label {
+  font-weight: 600;
+  color: #7f8c8d;
+}
+
+.summary-value {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.book-button {
+  width: 100%;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 15px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.book-button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.2);
+}
+
+.book-button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Modern Calendar Styles */
+.modern-calendar {
+  background-color: #fff;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.calendar-header {
+  background-color: #3498db;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+.current-month {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  padding: 10px 0;
+  background-color: #f8f9fa;
+}
+
+.calendar-day-name {
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #7f8c8d;
+}
+
+.calendar-dates {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  padding: 5px;
+}
+
+.calendar-date {
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.calendar-date:hover {
+  background-color: #f1f9fe;
+}
+
+.calendar-date.selected {
+  background-color: #3498db;
+}
+
+.calendar-date.selected .date-number,
+.calendar-date.selected .date-name {
+  color: white;
+}
+
+.date-number {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.date-name {
+  font-size: 0.75rem;
+  color: #7f8c8d;
+}
+
+/* Time slots styling */
+.time-slots {
+  margin-top: 20px;
+}
+
+.time-slots h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.time-slot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  gap: 10px;
+}
+
+.time-slot {
+  padding: 10px;
+  text-align: center;
+  background-color: #f1f9fe;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+}
+
+.time-slot:hover:not(.unavailable) {
+  background-color: #d6eaf8;
+  transform: translateY(-2px);
+}
+
+.time-slot.selected {
+  background-color: #3498db;
+  color: white;
+  border-color: #2980b9;
+}
+
+.time-slot.unavailable {
+  background-color: #f8f9fa;
+  color: #bdc3c7;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+
+/* Booking modal styles */
+.booking-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  animation: modalFadeIn 0.3s ease-in-out;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-content h3 {
+  font-size: 1.5rem;
+  color: #3f51b5;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.modal-details {
+  margin-bottom: 30px;
+}
+
+.modal-details p {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.cancel-button, .confirm-button {
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex: 1;
+  border: none;
+}
+
+.cancel-button {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.cancel-button:hover {
+  background-color: #e0e0e0;
+}
+
+.confirm-button {
+  background-color: #3f51b5;
+  color: white;
+}
+
+.confirm-button:hover {
+  background-color: #303f9f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(63, 81, 181, 0.3);
+}
+
+.success-message {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.success-message p {
+  font-size: 1.1rem;
+  margin: 10px 0;
+  color: #2e7d32;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .scheduler-container {
+    flex-direction: column;
+  }
+  
+  .scheduler-left, .scheduler-right {
+    width: 100%;
+  }
+} 

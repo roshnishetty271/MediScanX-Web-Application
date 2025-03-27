@@ -1,0 +1,87 @@
+.product-container {
+    color: #ffffff;
+    background-color: #091927;
+    padding: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.product p {
+    margin: 0;
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+.product-boxes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Two columns of equal width */
+    grid-template-rows: repeat(3, 1fr);
+    /* Three rows of equal height */
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.product-box {
+    width: 270px;
+    height: 150px;
+    background-color: #0f2332;
+    position: relative;
+    border-radius: 10px;
+    background-image: linear-gradient(to left, rgba(255, 0, 0, 0), rgba(255, 120, 105, 1));
+}
+
+.product-box img {
+    width: 60%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    border-radius: 0 10px 10px 0;
+    opacity: 0.4;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(53, 57, 87, 0.2);
+    /* Grey color with 50% transparency */
+    z-index: 2;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.overlay p {
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-left: 1rem;
+    color: #ffffff;
+    width: 55%;
+    word-wrap: break-word;
+}
+
+.appointment {
+    padding: 3rem;
+    background-color: #008280;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+}
+
+.appointment p {
+    width: 50%;
+    word-wrap: break-word;
+}
+
+.appointment button {
+    padding: 1.2rem;
+    border-radius: 15px;
+    color: #008280;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+}

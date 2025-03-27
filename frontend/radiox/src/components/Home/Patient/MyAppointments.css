@@ -1,0 +1,73 @@
+.appointments-container {
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+.sidebar-paper {
+  padding: 24px;
+  height: 100%;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+}
+
+.sidebar-title {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 12px;
+  margin-bottom: 24px !important;
+  font-weight: 600;
+}
+
+.filter-buttons {
+  margin-bottom: 30px;
+}
+
+.filter-button {
+  margin-bottom: 10px !important;
+}
+
+.action-buttons {
+  margin-top: 40px;
+}
+
+.schedule-button {
+  margin-bottom: 12px !important;
+  background-color: #3498db !important;
+}
+
+.profile-button {
+  color: #3498db !important;
+  border-color: #3498db !important;
+}
+
+.content-paper {
+  padding: 24px;
+  min-height: 600px;
+  border-radius: 10px;
+}
+
+.page-title {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 15px;
+  margin-bottom: 30px !important;
+  font-weight: 600;
+}
+
+.appointments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  gap: 16px;
+}
+
+.no-appointments {
+  padding: 24px !important;
+  font-size: 1.1rem !important;
+  text-align: center;
+}
+
+@media (max-width: 960px) {
+  .sidebar-paper {
+    margin-bottom: 24px;
+  }
+} 

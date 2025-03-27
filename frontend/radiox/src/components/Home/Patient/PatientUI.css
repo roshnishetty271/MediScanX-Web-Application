@@ -1,0 +1,290 @@
+.patient-container {
+    display: flex;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.patient-ui {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+.patient-ui h1 {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 20px;
+    margin-left: 180px;
+}
+
+.patient-ui h2 {
+    color: #ff7869;
+    font-size: 24px;
+    margin-left: 0;
+}
+
+.patient-ui p {
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 26px;
+    position: relative;
+    left: 0;
+}
+
+.patient-ui p span {
+    font-weight: bold;
+    color: black;
+    margin-right: 10px;
+}
+
+
+/* Add a border to separate profile details */
+
+.patient-ui>div {
+    border-top: 2px solid #ddd;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+
+/* Style the profile details */
+
+.patient-ui>div>p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.patient-ui>div>p:before {
+    content: '\2022';
+    color: black;
+    margin-right: 10px;
+}
+
+
+/* Adjust spacing and font size for a cleaner look */
+
+.patient-ui p,
+.patient-ui h2 {
+    margin-left: 0;
+}
+
+
+/* Media query for small screens */
+
+@media screen and (max-width: 768px) {
+    .patient-ui>div {
+        padding-top: 10px;
+        margin-top: 10px;
+    }
+    .patient-ui>div>p {
+        font-size: 14px;
+    }
+}
+
+.sidebar {
+    background-color: rgb(11, 36, 52);
+    color: white;
+    width: 250px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-right: 30px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: fixed;
+    left: 0;
+    /* Updated to keep the sidebar open */
+    top: 0;
+    transition: left 0.4s ease-in-out;
+}
+
+.sidebar-content {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #ff7869;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    top: -20px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.sidebar-content:hover {
+    background-color: #e05a4f;
+}
+
+.menu-icon {
+    background-color: white;
+    height: 3px;
+    width: 25px;
+    margin-left: 280px;
+    margin-bottom: 3px;
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 265px;
+    position: relative;
+    color: #ff7869;
+}
+
+.menu-line {
+    background-color: #ff7869;
+    height: 3px;
+    width: 22px;
+    margin: 3px 0;
+}
+
+.logo-image {
+    width: 110px;
+    height: 110px;
+}
+
+.profile-box {
+    background-color: white;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    margin-left: 300px;
+}
+
+
+/* Adjusted styles for profile details within the box */
+
+.profile-box h2 {
+    color: black;
+    font-size: 24px;
+    margin-right: 90px;
+    margin-bottom: 40px;
+}
+
+.profile-box p {
+    color: black;
+    margin-bottom: 20px;
+    font-size: 18px;
+    position: relative;
+    left: 0;
+    text-align: left;
+}
+
+.profile-box span {
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.profile-section-divider {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.sidebar-content.active {
+    background-color: white;
+    color: #e05a4f;
+}
+
+.profile-box form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+
+.form-column {
+    width: 48%;
+}
+
+.profile-box form label {
+    color: black;
+    font-size: 15px;
+    margin-bottom: 10px;
+    display: block;
+    text-align: left;
+    /* Align labels to the left */
+}
+
+.profile-box form input {
+    width: 100%;
+    /* Updated to take full width */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(245, 248, 250, 1);
+    font-size: 16px;
+}
+
+.profile-box form button {
+    width: auto;
+    /* Updated to auto width */
+    padding: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    top: 180px;
+    right: 430px;
+}
+
+.profile-box form button:hover {
+    background-color: #0051ff;
+}
+
+/* Appointment container styling */
+.appointment-container {
+    padding: 20px;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.appointment-container .appointment-scheduler {
+    max-width: 100%;
+    padding: 0;
+}
+
+.appointment-container .scheduler-container {
+    gap: 15px;
+}
+
+.appointment-container .scheduler-section {
+    margin-bottom: 15px;
+}
+
+/* Make appointment scheduler responsive within patient UI */
+@media (max-width: 1200px) {
+    .appointment-container .scheduler-container {
+        flex-direction: column;
+    }
+    
+    .appointment-container .scheduler-left,
+    .appointment-container .scheduler-right {
+        width: 100%;
+    }
+}
+
+/* Profile columns for better layout */
+.profile-column {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile-column > div {
+    width: 48%;
+}

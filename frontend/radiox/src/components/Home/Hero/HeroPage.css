@@ -1,0 +1,45 @@
+/* HeroPage.css */
+
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0f2332; 
+  color: #ffffff;
+  padding-right: 150px;
+  padding-left: 150px;
+  font-family: DM Sans,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji !important;
+}
+
+.left-side {
+  width: 50%;
+}
+
+.left-side p{
+  font-size: 20px;
+  margin: 24px 0px;
+}
+
+.left-side h1{
+  font-size: 60px;
+  margin: 0;
+  font-weight: 600;
+}
+
+.right-side img {
+  height: auto;
+}
+
+.live-demo-button {
+  background-color: #ff7869;
+  color: white;
+  padding: 1.25rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 1rem;
+}
+
+/* Add additional styles as needed */

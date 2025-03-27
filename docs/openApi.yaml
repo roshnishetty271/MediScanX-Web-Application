@@ -1,0 +1,477 @@
+openapi: 3.1.0
+info:
+  title: RadioX Health Portal API
+  description: REST API for patient registration, login, appointment scheduling, and medical report viewing, Patient deletion, Add, Delete and update details of Doctor, Bill Generation
+  version: 1.0.0
+
+servers:
+  - url: http://localhost:8080
+
+paths:
+  /schedule:
+    post:
+      summary: Schedule appointment
+      operationId: ScheduleAppointment
+      requestBody:
+        required: true
+        content:
+          application/json:
+            example:
+              patientID: "12345"
+              serviceName: "ECG"
+              date: "2023-11-15"
+              time: "14:00"
+              duration: 60
+              location: "Jamaica Plain"
+              patientName: "John Maker"
+              doctorName: "Lorem Ipsum"
+      responses:
+        '200':
+          description: Successful scheduling
+          content:
+            application/json:
+              example:
+                message: "Appointment scheduled successfully"
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              example:
+                error: "Invalid request body"
+
+  /cancel/{id}:
+    delete:
+      summary: Cancel a scheduled appointment by ID
+      operationId: CancelAppointment
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID of the scheduled appointment to be canceled
+          example: 123
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Successful cancellation
+          content:
+            application/json:
+              example:
+                message: "Appointment canceled successfully"
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              example:
+                error: "Appointment not found"
+
+  /update/{id}:
+    put:
+      summary: Update scheduled appointment by ID
+      operationId: UpdateService
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID of the scheduled appointment to be updated
+          example: 123
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            example:
+              serviceName: "Updated appointment"
+              date: "2023-11-16"
+              time: "15:30"
+              duration: 90
+              location: "Jamaica Plain"
+              patientName: "John Maker"
+              doctorName: "Lorem Ipsum"
+      responses:
+        '200':
+          description: Successful update
+          content:
+            application/json:
+              example:
+                message: "Appointment information updated successfully"
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              example:
+                error: "Appointment not found"
+
+  /viewscheduled/{id}:
+    get:
+      summary: View scheduled appointment information by ID
+      operationId: ViewScheduledAppointment
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID of the scheduled appointment to view information
+          example: 123
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Successful retrieval
+          content:
+            application/json:
+              example:
+                serviceName: "ECG"
+                date: "2023-11-15"
+                time: "14:00"
+                duration: 60
+                location: "Jamaica Plain"
+                patientName: "John Maker"
+                doctorName: "Lorem Ipsum"
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              example:
+                error: "Appointment not found"
+
+  /patientlogin:
+    post:
+      summary: Log in a patient
+      requestBody:
+        required: true
+        content:
+          application/json:
+            example:
+              username: patient1
+              password: securepassword
+      responses:
+        '200':
+          description: Successful login
+          content:
+            application/json:
+              example:
+                message: "Patient logged in successfully"
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              example:
+                error: "Invalid credentials"
+
+  /patientregistration:
+    post:
+      summary: Register a new patient
+      operationId: RegisterPatient
+      requestBody:
+        required: true
+        content:
+          application/json:
+            example:
+              name: Patient 1
+              dateOfBirth: "1990-01-01"
+              phoneNumber: "+1234567890"
+              address: "123 Main St, Cityville"
+              gender: Male
+              symptoms: "Fever, Headache"
+              username: patient1
+              password: securepassword
+      responses:
+        '200':
+          description: Successful registration
+          content:
+            application/json:
+              example:
+                message: "Patient registered successfully"
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              example:
+                error: "Invalid request body"
+
+  /patientregistration/delete/{id}:
+    delete:
+      summary: Delete a patient appointment by ID
+      operationId: DeletePatientAppointment
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Appointment of the patient to be deleted by using ID of the patient.
+          example: 123
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Successful deletion
+          content:
+            application/json:
+              example:
+                message: "Patient appointment deleted successfully"
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              example:
+                error: "Patient not found"
+
+  /patientregistration/update/{id}:
+    put:
+      summary: Update patient information by ID
+      operationId: UpdatePatient
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID of the patient to be updated
+          example: 123
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            example:
+              name: Updated Name
+              age: 31
+              gender: Male
+              contactNumber: "+1234567890"
+      responses:
+        '200':
+          description: Successful update
+          content:
+            application/json:
+              example:
+                message: "Patient information updated successfully"
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              example:
+                error: "Patient not found"
+
+  /patientregistration/viewinfo/{id}:
+    get:
+      summary: View patient information by ID
+      operationId: ViewPatientInfo
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID of the patient to view information
+          example: 123
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Successful retrieval
+          content:
+            application/json:
+              example:
+                name: Patient 1
+                dateOfBirth: "1990-01-01"
+                phoneNumber: "+1234567890"
+                address: "123 Main St, Cityville"
+                gender: Male
+                symptoms: "Fever, Headache"
+                contactNumber: "+1234567890"
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              example:
+                error: "Patient not found"
+
+  /patientviewreport/{id}:
+    get:
+      summary: View patient's medical report by ID
+      operationId: ViewPatientReport
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID of the patient to view the medical report
+          example: 123
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Successful retrieval
+          content:
+            application/json:
+              example:
+                reportDate: "2023-11-13"
+                diagnosis: "Healthy"
+                prescription: "No medication required"
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              example:
+                error: "Medical report not found"
+
+  /doctors:
+    post:
+      summary: Add a new doctor
+      operationId: AddDoctor
+      requestBody:
+        required: true
+        content:
+          application/json:
+            example:
+              name: "Dr. Smith"
+              specialty: "Cardiology"
+              contactNumber: +123456789
+              address: "Jamaica Plain" 
+      responses:
+        '201':
+          description: Successful addition
+          content:
+            application/json:
+              example:
+                message: "Doctor added successfully"
+
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+                example:
+                    message: "Error while adding Doctor details"
+            
+        
+
+  /doctors/{id}:
+    delete:
+      summary: Delete a doctor by ID
+      operationId: DeleteDoctor
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID of the doctor to delete
+          example: 456
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Successful deletion
+          content:
+            application/json:
+              example:
+                message: "Doctor successfully deleted"
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              example:
+                message: "Doctor not found"
+
+    put:
+      summary: Update details of a doctor by ID
+      operationId: UpdateDoctor
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID of the doctor to update
+          example: 456
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            example:
+              name: "Dr. Johnson"
+              specialty: "Dermatology"
+      responses:
+        '200':
+          description: Successful update
+          content:
+            application/json:
+              example:
+                message: "Doctor details updated successfully"
+        '404':
+          description: Not Found
+          content:
+            application/json:
+             example:
+                message: "Doctor not found"
+
+  /generatebill:
+    post:
+      summary: Generate a bill
+      operationId: GenerateBill
+      responses:
+        '200':
+          description: Successful bill generation
+          content:
+            application/json:
+              example:
+                message: "Bill generated successfully"
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              example:
+                message: "Error while generatiing bill"
+
+components:
+  schemas:
+    PatientInformation:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        age:
+          type: integer
+        gender:
+          type: string
+        contactNumber:
+          type: string
+        urgency:
+          type: string
+        dateoftest:
+          type: string
+          format: date
+    Message:
+      type: object
+      properties:
+        message:
+          type: string
+    MedicalScans:
+      type: object
+      properties:
+        scanType:
+          type: string
+        result:
+          type: string
+    Error:
+      type: object
+      properties:
+        error:
+          type: string
+    Doctor:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        specialty:
+          type: string
+          address:
+            type: string
+            contactNumber: 
+             type: string
+    Bill:
+      type: object
+      properties:
+        amount:
+          type: number
+          format: float
+        description:
+          type: string

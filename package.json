@@ -1,0 +1,38 @@
+{
+    "name": "final-project-raps",
+    "version": "1.0.0",
+    "description": "Welcome to RadioX Web Application, a state-of-the-art web application aimed at transforming healthcare management. RadioX is designed to enhance the patient experience, streamline administrative tasks, and provide healthcare professionals with efficient tools for patient care.",
+    "main": "server.js",
+    "directories": {
+        "doc": "docs"
+    },
+    "type": "module",
+    "scripts": {
+        "start": "nodemon server.js",
+        "init-db": "node init-db.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@emotion/react": "^11.11.1",
+        "@emotion/styled": "^11.11.0",
+        "@mui/icons-material": "^5.14.19",
+        "@mui/material": "^5.15.0",
+        "@types/styled-components": "^5.1.32",
+        "body-parser": "^1.20.2",
+        "cors": "^2.8.5",
+        "debug": "^4.3.4",
+        "dotenv": "^16.4.7",
+        "dwv": "^0.32.3",
+        "express": "^4.18.2",
+        "mongoose": "^8.0.1",
+        "nodemon": "^3.0.1",
+        "react-router-dom": "^6.20.1",
+        "stripe": "^14.7.0",
+        "styled-components": "^6.1.1",
+        "uuid": "^9.0.1"
+    },
+    "devDependencies": {
+        "@types/react-router-dom": "^5.3.3"
+    }
+}
