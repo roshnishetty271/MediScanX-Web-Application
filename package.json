@@ -10,7 +10,9 @@
     "type": "module",
     "scripts": {
         "start": "nodemon server.js",
-        "init-db": "node init-db.js"
+        "init-db": "node init-db.js",
+         "build": "react-scripts build",
+         "deploy": "gh-pages -d build"
     },
     "author": "",
     "license": "ISC",
