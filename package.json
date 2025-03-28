@@ -1,7 +1,6 @@
 {
     "name": "final-project-raps",
     "version": "1.0.0",
-    "homepage": "https://roshnishetty271.github.io/MediScanX-Web-Application/",
     "description": "Welcome to RadioX Web Application, a state-of-the-art web application aimed at transforming healthcare management. RadioX is designed to enhance the patient experience, streamline administrative tasks, and provide healthcare professionals with efficient tools for patient care.",
     "main": "server.js",
     "directories": {
@@ -11,8 +10,7 @@
     "scripts": {
         "start": "nodemon server.js",
         "init-db": "node init-db.js",
-         "build": "react-scripts build",
-         "deploy": "gh-pages -d build"
+         "build": "react-scripts build"
     },
     "author": "",
     "license": "ISC",
