@@ -1,6 +1,7 @@
 {
   "name": "radiox",
   "version": "0.1.0",
+  "homepage": "https://roshnishetty271.github.io/MediScanX-Web-Application/",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -42,7 +43,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
