@@ -53,3 +53,19 @@ Administrators can securely log in to access a powerful set of administrative fu
 #### Upload Scans
 
 Effortlessly upload medical images and scans for a specific patient, facilitating better collaboration among healthcare professionals.
+
+***Peek into Home Page***
+
+![image](https://github.com/user-attachments/assets/cf8960ef-fcf9-44f1-8863-fb910ff9d096)
+
+![image](https://github.com/user-attachments/assets/71d35bc5-378a-4f3c-b426-38c13fa8b94c)
+
+![image](https://github.com/user-attachments/assets/8472d020-21dc-428e-966b-c44d0c3b58fe)
+
+![image](https://github.com/user-attachments/assets/adf8d989-1343-43a7-8d2b-93bc8253c942)
+
+![image](https://github.com/user-attachments/assets/497664b7-d501-4495-92a2-7fe263092953)
+
+
+
+
