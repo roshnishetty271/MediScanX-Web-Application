@@ -2,12 +2,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import './Navbar.css';
-import navlogo from '../../../images/Radiox-logo.png';
+import navlogo from '../../../images/Mediscanx-logo.png';
 
 const Navbar = () => {
   return (
     <div className="navbar">
-       <Link to="/">
+      <Link to="/">
         <img src={navlogo} alt="Qure Logo" width={50} height={'auto'} />
       </Link>
       <div>

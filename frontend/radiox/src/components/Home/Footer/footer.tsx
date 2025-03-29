@@ -6,7 +6,7 @@ import twitterIcon from "../../../images/twitter-icon.png"
 import InstagramIcon from "../../../images/Instagram.jpg"
 import facebookIcon from "../../../images/facebook.jpg"
 import youtubeIcon from "../../../images/youtube.jpg"
-import navlogo from '../../../images/Radiox-logo.png';
+import navlogo from '../../../images/Mediscanx-logo.png';
 
 const FooterSections: React.FC = () => {
   return (
@@ -15,9 +15,9 @@ const FooterSections: React.FC = () => {
       <section className="footer-section">
         
         <img src={navlogo} alt="Qure Logo" width={50} height={'auto'} />
-        <p>RadioX Health Platform</p>
+        <p>MediScanX Health Platform</p>
         <p className="footer-qure-para">
-          RadioX was founded in 2023. Our mission is to use technology to make healthcare more accessible and affordable.
+          MediScanX was founded in 2023. Our mission is to use technology to make healthcare more accessible and affordable.
         </p>
         
         <div className="footer-follow-us">
@@ -56,7 +56,7 @@ const FooterSections: React.FC = () => {
           <li><Link to="/stroke-tbi">Stroke & TBI</Link></li>
           <li><Link to="/msk-x-ray-reporting">MSK X-Ray Reporting</Link></li>
           <li><Link to="/heart-failure">Heart Failure</Link></li>
-          <li><Link to="/qure-ai-app">RadioX App</Link></li>
+          <li><Link to="/qure-ai-app">MediScanX App</Link></li>
         </ul>
       </section>
 

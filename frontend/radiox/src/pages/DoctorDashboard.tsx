@@ -1191,7 +1191,7 @@ const DoctorDashboard: React.FC = () => {
       >
         <Box display="flex" alignItems="center">
           <Typography variant="h5" component="h1" fontWeight="bold">
-            RadioX Doctor Portal
+            MediScanX Doctor Portal
           </Typography>
         </Box>
         <Box display="flex" alignItems="center">

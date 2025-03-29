@@ -4,7 +4,7 @@ import './Loginscreen.css';
 import Image1 from '../../../images/patient-login.png';
 import Image2 from '../../../images/patient-login2.png';
 import Image3 from '../../../images/patient-login3.png';
-import NavLogo from '../../../images/Radiox-logo.png';
+import NavLogo from '../../../images/Mediscanx-logo.png';
 
 const textData = [
   "Fast and accurate reporting with intelligent tools",
@@ -183,7 +183,7 @@ const AppContainer: React.FC = () => {
       </div>
       
       <div className="login-container">
-        <h2>Login to RadioX</h2>
+        <h2>Login to MediScanX</h2>
         
         {error && <div className="error-message">{errorMessage || 'Invalid username or password'}</div>}
         

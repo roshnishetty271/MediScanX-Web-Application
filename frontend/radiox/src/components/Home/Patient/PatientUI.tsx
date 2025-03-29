@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { Link, useLocation } from 'react-router-dom'; // Import useLocation
 import { selectUserData, setUserData } from "../../../app/store";
 import "./PatientUI.css";
-import radioXImage from "../../../images/Radiox-logo.png";
+import radioXImage from "../../../images/Mediscanx-logo.png";
 import { useNavigate } from 'react-router-dom';
 import AppointmentScheduler from "../../../components/Appointment/AppointmentScheduler/AppointmentScheduler";
 
@@ -245,7 +245,7 @@ const PatientUI: React.FC = () => {
         </button>
       </div>
       <div className="patient-ui">
-        <h1>Welcome to Radiox Patient Portal</h1>
+        <h1>Welcome to MediScanX Patient Portal</h1>
         {renderContent()}
       </div>
     </div>

@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/MediScanX-Web-Application/static/css/main.7b11cbeb.css",
+    "main.js": "/MediScanX-Web-Application/static/js/main.8164bccb.js",
+    "static/media/productSkeleton.svg": "/MediScanX-Web-Application/static/media/productSkeleton.ee94489df6258f45cb8a43d08e26c15b.svg",
+    "static/media/patient-login3.png": "/MediScanX-Web-Application/static/media/patient-login3.2158bea3fe0d9397e167.png",
+    "static/media/patient-login2.png": "/MediScanX-Web-Application/static/media/patient-login2.80140eaf46771c18e870.png",
+    "static/media/patient-login.png": "/MediScanX-Web-Application/static/media/patient-login.fa54656f23a04402ac45.png",
+    "static/media/hero.jpeg": "/MediScanX-Web-Application/static/media/hero.439dd0553d78a73603d8.jpeg",
+    "static/media/assistance.jpeg": "/MediScanX-Web-Application/static/media/assistance.c2606d29cf335d1b6217.jpeg",
+    "static/media/support.jpeg": "/MediScanX-Web-Application/static/media/support.b2a6ef01ef520995469b.jpeg",
+    "static/media/collaborator.jpeg": "/MediScanX-Web-Application/static/media/collaborator.55e968484cb2dfb03d3d.jpeg",
+    "static/media/Radiox-logo.png": "/MediScanX-Web-Application/static/media/Radiox-logo.e3d51374afdbe86a7a15.png",
+    "static/media/neurologist.jpg": "/MediScanX-Web-Application/static/media/neurologist.3acef25ef7f0fe101f7b.jpg",
+    "static/media/ortho.jpg": "/MediScanX-Web-Application/static/media/ortho.2be059631cfa24278809.jpg",
+    "static/media/Radiology.jpg": "/MediScanX-Web-Application/static/media/Radiology.04afb8e0bc75414538f6.jpg",
+    "static/media/youtube.jpg": "/MediScanX-Web-Application/static/media/youtube.21201314716fa834dfa3.jpg",
+    "static/media/Instagram.jpg": "/MediScanX-Web-Application/static/media/Instagram.b1a54e52c38bfe26267e.jpg",
+    "service-worker.js": "/MediScanX-Web-Application/service-worker.js",
+    "static/media/cardiologist.jpg": "/MediScanX-Web-Application/static/media/cardiologist.2aee86c61d3038f22696.jpg",
+    "static/media/twitter-icon.png": "/MediScanX-Web-Application/static/media/twitter-icon.9bc85a6255085224d938.png",
+    "index.html": "/MediScanX-Web-Application/index.html",
+    "main.7b11cbeb.css.map": "/MediScanX-Web-Application/static/css/main.7b11cbeb.css.map",
+    "main.8164bccb.js.map": "/MediScanX-Web-Application/static/js/main.8164bccb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7b11cbeb.css",
+    "static/js/main.8164bccb.js"
+  ]
+}
